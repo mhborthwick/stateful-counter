@@ -1,6 +1,7 @@
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
+import { databaseClient } from "./database";
 
 const app = express();
 const port = 3001;
@@ -46,6 +47,11 @@ app.post("/decrement", async (req, res) => {});
  */
 app.post("/reset", (req, res) => {});
 
-app.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}`);
-});
+async function main() {
+  await databaseClient.connect();
+  app.listen(port, () => {
+    console.log(`Listening on http://localhost:${port}`);
+  });
+}
+
+main();
