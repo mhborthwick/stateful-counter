@@ -22,6 +22,11 @@ app.get("/", (_, res) => {
 app.get("/user", async (req, res) => {});
 
 /**
+ * Create user
+ */
+app.post("/user/create", async (req, res) => {});
+
+/**
  * Get count
  */
 app.get("/count", async (req, res) => {});
