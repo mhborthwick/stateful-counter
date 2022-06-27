@@ -4,6 +4,7 @@
   "description": "A MERN stack app that lets you count up and down",
   "main": "index.js",
   "scripts": {
+    "backend": "ts-node-dev api/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
