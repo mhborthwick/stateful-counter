@@ -12,3 +12,10 @@ Node >=16.x
 - Express
 - React
 - Node
+
+# Install
+
+```
+$ npm install
+$ make backend
+```
